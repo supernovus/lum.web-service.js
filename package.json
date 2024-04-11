@@ -1,0 +1,30 @@
+{
+  "name": "@lumjs/web-service",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "exports":
+  {
+    ".": "./lib/index.js",
+    "./builder": "./lib/builder.js",
+    "./defs": "./lib/defs.js",
+    "./methodcall": "./lib/methodcall.js",
+    "./placeholder": "./lib/placeholder.js",
+    "./utils": "./lib/utils.js",
+    "./webservice": "./lib/webservice.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/supernovus/lum.web-service.js.git"
+  },
+  "dependencies": {
+    "@lumjs/core": "^1.21.0",
+    "@lumjs/web-core": "^1.3.0"
+  },
+  "scripts":
+  {
+    "build-docs": "jsdoc -c ./jsdoc.json"
+  }
+}
