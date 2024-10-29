@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2024-10-04
+### Changed
+- Now fully supports the new events-based `observable` API.
+- Uses `wrapargs: true` by observable option by default.
+- Builder now supports extending existing Webservice instances!
+- Moved to using `@lumjs/build` for building documentation.
+- Extended and enhanced the documentation, including the examples.
+
 ## [1.1.0] - 2024-04-15
 ### Changed
 - The `Builder` is now `observable` and has a `build` event observed.
@@ -16,7 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.web-service.js/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.web-service.js/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/supernovus/lum.web-service.js/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/supernovus/lum.web-service.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.web-service.js/releases/tag/v1.0.0
 

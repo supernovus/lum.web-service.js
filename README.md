@@ -20,7 +20,7 @@ Nothing too high up on the priority list, but a few _would like_ features:
 - Helpers to make working with `FormData` _Request_ data easier.
 - Helpers to make working with binary _Response_ data easier.
 
-## [Examples](EXAMPLES.md)
+## [Examples](docs/EXAMPLES.md)
 
 ## Official URLs
 

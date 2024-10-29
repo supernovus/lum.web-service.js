@@ -1,8 +1,14 @@
 # Examples
 
+## Basic Usage
+
+This example shows how to create a new Webservice instance using a
+Builder, then make some calls on it with multiple examples of how
+different HTTP methods and arguments are handled.
+
 ```js
 // Get a Builder instance to define the web service.
-const wsb = require('@lumjs/web-service').make();
+const wsb = require('@lumjs/web-service').make({id: 'demo'});
 const {MIME} = wsb.DEFS; // A list of common MIME types.
 
 const DOCS = '/docs/';
@@ -25,7 +31,7 @@ ws.listDocs().then(data => console.log(data.docs));
 //
 // This works as 'GET', 'HEAD', 'DELETE', and 'OPTIONS' will use the passed 
 // options to build a query string if no `query` option is set.
-ws.getDoc({author: "me"}).then(console.log);
+ws.listDocs({author: "me"}).then(console.log);
 
 // Request path will be '/docs/123'
 //
@@ -83,4 +89,29 @@ ws.saveDoc(
   body:    {author: 'me', date: new Date()},
   query:   {mode: 2},
 });
+```
+## Extending an existing Webservice
+
+For this example we're going to extend an existing web-service.
+
+We're using the `customWrappers` option so that custom HTTP methods
+will add wrapper methods (the lowercase name of the HTTP method).
+
+We'll also assume that `./ws.js` is the Webservice we defined in the
+previous example (that we're now extending).
+
+```js
+const wsb = require('@lumjs/web-service').make(
+{
+  extend: require('./ws.js'),
+  customWrappers: true,
+});
+
+const ws = wsb.http('UNDELETE', 'DELETE')
+  .undelete('restoreDoc', '/docs/{docId}')
+  .build(); // Extend the existing Webservice.
+
+// Request -> UNDELETE /docs/420?all=true
+ws.restoreDoc({docId: 420, all: true});
+
 ```

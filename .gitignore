@@ -3,3 +3,4 @@
 /.gulp-cache*
 /package-lock.json
 /docs/api/*
+/docs/build/*
