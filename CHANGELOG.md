@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-02-05
+### Changed
+- Added a `baseURL` option to the Webservice class which will be used
+  by the MethodCall class to determine the _origin_ portion of the URL.
+  If not specified it will default to using `location.origin` as it did
+  in previous versions.
+- Added a `base()` method to the Builder class which is used to set the
+  new `baseURL` option.
+
 ## [1.2.0] - 2024-10-04
 ### Changed
 - Now fully supports the new events-based `observable` API.
@@ -24,7 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.web-service.js/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.web-service.js/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/supernovus/lum.web-service.js/compare/v1.1.0...v1.2.0
 [1.2.0]: https://github.com/supernovus/lum.web-service.js/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/supernovus/lum.web-service.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.web-service.js/releases/tag/v1.0.0
