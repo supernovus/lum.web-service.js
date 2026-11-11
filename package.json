@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/web-service",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "main": "lib/index.js",
   "exports":
   {
@@ -14,12 +14,12 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "@lumjs/core": "^1.36.0",
-    "@lumjs/web-core": "^1.6.0"
+    "@lumjs/core": "^1.39.3",
+    "@lumjs/web-core": "^1.12.0"
   },
   "devDependencies":
   {
-    "@lumjs/build": "^1.1.0"
+    "@lumjs/build": "^1.2.0"
   },
   "scripts":
   {
